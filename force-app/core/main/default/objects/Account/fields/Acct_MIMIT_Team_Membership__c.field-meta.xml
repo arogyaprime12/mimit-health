@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Acct_MIMIT_Team_Membership__c</fullName>
+    <description>This field describes whether this account (company / department) is part of a MIMIT team and which one</description>
+    <inlineHelpText>Select the MIMIT team that this  this account (company / department) participates in</inlineHelpText>
+    <label>Acct_MIMIT_Team Membership</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Team_Membership</valueSetName>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

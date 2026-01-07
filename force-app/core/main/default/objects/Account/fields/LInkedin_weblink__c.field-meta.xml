@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LInkedin_weblink__c</fullName>
+    <description>The URL for the LinkedIn Company Page</description>
+    <encryptionScheme>None</encryptionScheme>
+    <inlineHelpText>please copy the URL ( web link) of the linkedIn page for the company</inlineHelpText>
+    <label>LInkedin_weblink</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Url</type>
+</CustomField>

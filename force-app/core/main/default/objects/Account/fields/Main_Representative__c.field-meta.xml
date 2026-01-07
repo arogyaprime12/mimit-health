@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Main_Representative__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Name of the account representative who is the Liasion with the vendor company</description>
+    <inlineHelpText>Name of the account representative who is the Liasion with the vendor company</inlineHelpText>
+    <label>Main Representative</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Accounts (Vendor Rep Contact)</relationshipLabel>
+    <relationshipName>Accounts5</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

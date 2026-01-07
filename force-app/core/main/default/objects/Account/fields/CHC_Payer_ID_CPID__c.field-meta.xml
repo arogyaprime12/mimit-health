@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CHC_Payer_ID_CPID__c</fullName>
+    <description>CPID, or Claims Payer ID, refers to the unique identification number assigned to each insurance payer or healthcare plan. It helps identify the payer when submitting claims for reimbursement of funds.</description>
+    <encryptionScheme>None</encryptionScheme>
+    <externalId>false</externalId>
+    <inlineHelpText>CPID, or Claims Payer ID, refers to the unique identification number assigned to each insurance payer or healthcare plan. It helps identify the payer when submitting claims for reimbursement of funds.</inlineHelpText>
+    <label>CHC Payer ID (CPID)</label>
+    <length>20</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

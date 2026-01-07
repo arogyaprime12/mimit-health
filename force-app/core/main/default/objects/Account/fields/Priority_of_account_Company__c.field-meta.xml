@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Priority_of_account_Company__c</fullName>
+    <description>the priority of the account, Company, Department ( Customer, Vendor, Partner, other)  in terms of impact on the organization. Mission Critical accounts are those that are crucial for the survival or our organization. Mission Critical accounts are those that if they left us, we would be in serious trouble.</description>
+    <inlineHelpText>Please select the priority of the account, Company, Department Vendor in terms of impact on the organization. Mission Critical accounts are those that are crucial for the survival or our organization</inlineHelpText>
+    <label>Priority_of_account_Company</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Priority</valueSetName>
+    </valueSet>
+</CustomField>

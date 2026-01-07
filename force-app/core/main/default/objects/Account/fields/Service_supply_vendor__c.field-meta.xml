@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_supply_vendor__c</fullName>
+    <description>this describes the services supplied by a vendor</description>
+    <label>Service_supply_vendor</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Service_supply_vendor</valueSetName>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

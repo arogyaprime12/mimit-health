@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Patient_Stage__c</fullName>
+    <label>Patient Stage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pt-Existing - New Problem</fullName>
+                <default>false</default>
+                <label>Pt-Existing - New Problem</label>
+            </value>
+            <value>
+                <fullName>Patient is scheduled for Consult</fullName>
+                <default>false</default>
+                <label>Patient is scheduled for Consult</label>
+            </value>
+            <value>
+                <fullName>Patient will think about it and decide</fullName>
+                <default>false</default>
+                <label>Patient will think about it and decide</label>
+            </value>
+            <value>
+                <fullName>Patient evaluation and consult pending</fullName>
+                <default>false</default>
+                <label>Patient evaluation and consult pending</label>
+            </value>
+            <value>
+                <fullName>Patient awaiting self pay proposal</fullName>
+                <default>false</default>
+                <label>Patient awaiting self pay proposal</label>
+            </value>
+            <value>
+                <fullName>Patient SelfPay proposal negotiation</fullName>
+                <default>false</default>
+                <label>Patient SelfPay proposal negotiation</label>
+            </value>
+            <value>
+                <fullName>Patient to be Scheduled for procedure</fullName>
+                <default>false</default>
+                <label>Patient to be Scheduled for procedure</label>
+            </value>
+            <value>
+                <fullName>patient SCHEDULED for procedure</fullName>
+                <default>false</default>
+                <label>Patient SCHEDULED for procedure</label>
+            </value>
+            <value>
+                <fullName>Patient to be Rescheduled</fullName>
+                <default>false</default>
+                <label>Patient to be Rescheduled</label>
+            </value>
+            <value>
+                <fullName>Patient Follow Up</fullName>
+                <default>false</default>
+                <label>Patient Follow Up</label>
+            </value>
+            <value>
+                <fullName>Surveillance</fullName>
+                <default>false</default>
+                <label>Surveillance</label>
+            </value>
+            <value>
+                <fullName>Patient new referral with a problem</fullName>
+                <default>false</default>
+                <label>Patient new referral with a problem</label>
+            </value>
+            <value>
+                <fullName>procedure (Opp) completed</fullName>
+                <default>false</default>
+                <label>Procedure (Opp) completed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

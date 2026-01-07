@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Attending_Doctor__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Please check and update EHR to see attending doctor is correct and click save</description>
+    <inlineHelpText>Please check and update EHR to see attending doctor is correct and click save</inlineHelpText>
+    <label>EHR Attending Doctor</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Companies/ Departments (Attending Doctor)</relationshipLabel>
+    <relationshipName>Companies_Departments</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

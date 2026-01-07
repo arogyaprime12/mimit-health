@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Specialty__c</fullName>
+    <description>Specialty associated with the referral.</description>
+    <label>Specialty</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cardiology</fullName>
+                <default>false</default>
+                <label>Cardiology</label>
+            </value>
+            <value>
+                <fullName>Orthopedics</fullName>
+                <default>false</default>
+                <label>Orthopedics</label>
+            </value>
+            <value>
+                <fullName>Oncology</fullName>
+                <default>false</default>
+                <label>Oncology</label>
+            </value>
+            <value>
+                <fullName>Neurosurgery</fullName>
+                <default>false</default>
+                <label>Neurosurgery</label>
+            </value>
+            <value>
+                <fullName>Interventional Radiology</fullName>
+                <default>false</default>
+                <label>Interventional Radiology</label>
+            </value>
+            <value>
+                <fullName>Radiology</fullName>
+                <default>false</default>
+                <label>Radiology</label>
+            </value>
+            <value>
+                <fullName>Podiatry</fullName>
+                <default>false</default>
+                <label>Podiatry</label>
+            </value>
+            <value>
+                <fullName>Wound care</fullName>
+                <default>false</default>
+                <label>Wound care</label>
+            </value>
+            <value>
+                <fullName>Primary care</fullName>
+                <default>false</default>
+                <label>Primary care</label>
+            </value>
+            <value>
+                <fullName>Internal Medicine</fullName>
+                <default>false</default>
+                <label>Internal Medicine</label>
+            </value>
+            <value>
+                <fullName>Chiropractor</fullName>
+                <default>false</default>
+                <label>Chiropractor</label>
+            </value>
+            <value>
+                <fullName>Anesthesiology</fullName>
+                <default>false</default>
+                <label>Anesthesiology</label>
+            </value>
+            <value>
+                <fullName>Dermatology</fullName>
+                <default>false</default>
+                <label>Dermatology</label>
+            </value>
+            <value>
+                <fullName>ER</fullName>
+                <default>false</default>
+                <label>ER</label>
+            </value>
+            <value>
+                <fullName>Endocrinology</fullName>
+                <default>false</default>
+                <label>Endocrinology</label>
+            </value>
+            <value>
+                <fullName>Family medicine</fullName>
+                <default>false</default>
+                <label>Family medicine</label>
+            </value>
+            <value>
+                <fullName>Genealogy</fullName>
+                <default>false</default>
+                <label>Genealogy</label>
+            </value>
+            <value>
+                <fullName>Infectious disease</fullName>
+                <default>false</default>
+                <label>Infectious disease</label>
+            </value>
+            <value>
+                <fullName>Nephrology</fullName>
+                <default>false</default>
+                <label>Nephrology</label>
+            </value>
+            <value>
+                <fullName>Physical therapy</fullName>
+                <default>false</default>
+                <label>Physical therapy</label>
+            </value>
+            <value>
+                <fullName>Vascular</fullName>
+                <default>false</default>
+                <label>Vascular</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
