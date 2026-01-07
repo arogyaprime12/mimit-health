@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payable_Process__c</fullName>
+    <label>Payable Process</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Payable to be processed through Purchase order</fullName>
+                <default>false</default>
+                <label>Payable to be processed through Purchase order</label>
+            </value>
+            <value>
+                <fullName>Payable can be processed through AP case.</fullName>
+                <default>false</default>
+                <label>Payable can be processed through AP case.</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

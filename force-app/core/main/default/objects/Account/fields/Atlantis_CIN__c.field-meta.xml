@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Atlantis_CIN__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>COMPANY (Account) is associated with the Atlantis CIN network</description>
+    <inlineHelpText>Click this yes if this COMPANY  has any association with the CIN network. Could be a physician, Nurse, patient or another member of this COMPANY who has some connection with the Atlantis CIN</inlineHelpText>
+    <label>Atlantis CIN associate</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

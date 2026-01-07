@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NOT_a_1099_Vendor__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check if vendor should not receive a 1099</description>
+    <label>NOT a 1099 Vendor</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

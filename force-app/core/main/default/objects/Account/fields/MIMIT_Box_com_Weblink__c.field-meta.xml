@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MIMIT_Box_com_Weblink__c</fullName>
+    <description>MIMIT Box.com Link for companies / Dept</description>
+    <encryptionScheme>None</encryptionScheme>
+    <inlineHelpText>MIMIT Box.com Link for companies / Dept</inlineHelpText>
+    <label>MIMIT Box.com Weblink</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Url</type>
+</CustomField>

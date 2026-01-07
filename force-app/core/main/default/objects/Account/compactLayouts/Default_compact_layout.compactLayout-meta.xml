@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Default_compact_layout</fullName>
+    <fields>Name</fields>
+    <fields>HealthCloudGA__Active__c</fields>
+    <fields>MIMIT_non_physician_provider__c</fields>
+    <fields>OwnerId</fields>
+    <fields>BillingAddress</fields>
+    <fields>RecordTypeId</fields>
+    <label>Default compact layout</label>
+</CompactLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Patient_Status__c</fullName>
+    <description>Patient Status and Description</description>
+    <label>Patient Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>$</fullName>
+                <default>false</default>
+                <label>$</label>
+            </value>
+            <value>
+                <fullName>Completed Cosmetic</fullName>
+                <default>false</default>
+                <label>Completed Cosmetic</label>
+            </value>
+            <value>
+                <fullName>Completed Groupon</fullName>
+                <default>false</default>
+                <label>Completed Groupon</label>
+            </value>
+            <value>
+                <fullName>Compression Stockings</fullName>
+                <default>false</default>
+                <label>Compression Stockings</label>
+            </value>
+            <value>
+                <fullName>Do Not Call</fullName>
+                <default>false</default>
+                <label>Do Not Call</label>
+            </value>
+            <value>
+                <fullName>Groupon Converted Ablation</fullName>
+                <default>false</default>
+                <label>Groupon Converted Ablation</label>
+            </value>
+            <value>
+                <fullName>Groupon Converted Cosmetic</fullName>
+                <default>false</default>
+                <label>Groupon Converted Cosmetic</label>
+            </value>
+            <value>
+                <fullName>Groupon Only</fullName>
+                <default>false</default>
+                <label>Groupon Only</label>
+            </value>
+            <value>
+                <fullName>Not Scheduled</fullName>
+                <default>false</default>
+                <label>Not Scheduled</label>
+            </value>
+            <value>
+                <fullName>Photos NEEDED</fullName>
+                <default>false</default>
+                <label>Photos NEEDED</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>7</visibleLines>
+</CustomField>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Procedure_Category__c</fullName>
+    <label>Procedure Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Arterial- arteriogram / revascularization</fullName>
+                <default>false</default>
+                <label>Arterial- arteriogram / revascularization</label>
+            </value>
+            <value>
+                <fullName>Arterial- PADnet Reading</fullName>
+                <default>false</default>
+                <label>Arterial- PADnet Reading</label>
+            </value>
+            <value>
+                <fullName>Arterial-PADnet Ultrasound</fullName>
+                <default>false</default>
+                <label>Arterial-PADnet Ultrasound</label>
+            </value>
+            <value>
+                <fullName>Consult</fullName>
+                <default>false</default>
+                <label>Consult</label>
+            </value>
+            <value>
+                <fullName>Dialysis</fullName>
+                <default>false</default>
+                <label>Dialysis</label>
+            </value>
+            <value>
+                <fullName>Follow Up</fullName>
+                <default>false</default>
+                <label>Follow Up</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Primary Care</fullName>
+                <default>false</default>
+                <label>Primary Care</label>
+            </value>
+            <value>
+                <fullName>SVI - EVLT (Laser)</fullName>
+                <default>false</default>
+                <label>SVI - EVLT (Laser)</label>
+            </value>
+            <value>
+                <fullName>SVI - Procedure- Pending approval</fullName>
+                <default>false</default>
+                <label>SVI - Procedure- Pending approval</label>
+            </value>
+            <value>
+                <fullName>SVI - RF vein Ablation</fullName>
+                <default>false</default>
+                <label>SVI - RF vein Ablation</label>
+            </value>
+            <value>
+                <fullName>SVI - Varithena (superficial venous insufficiency)</fullName>
+                <default>false</default>
+                <label>SVI - Varithena (superficial venous insufficiency)</label>
+            </value>
+            <value>
+                <fullName>Venous- venogram / revascularization</fullName>
+                <default>false</default>
+                <label>Venous- venogram / revascularization</label>
+            </value>
+            <value>
+                <fullName>WH- embolization- pelvic congestion</fullName>
+                <default>false</default>
+                <label>WH- embolization- pelvic congestion</label>
+            </value>
+            <value>
+                <fullName>WH- UFE (Women’s Health)</fullName>
+                <default>false</default>
+                <label>WH- UFE (Women’s Health)</label>
+            </value>
+            <value>
+                <fullName>Woundcare_Epifix</fullName>
+                <default>false</default>
+                <label>Woundcare_Epifix</label>
+            </value>
+            <value>
+                <fullName>Woundcare_General</fullName>
+                <default>false</default>
+                <label>Woundcare_General</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

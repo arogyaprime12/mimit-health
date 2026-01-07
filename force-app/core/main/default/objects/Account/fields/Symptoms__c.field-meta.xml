@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Symptoms__c</fullName>
+    <label>Symptoms</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Abdominal pain, Heavy menstrual bleeding, Increased urination</fullName>
+                <default>false</default>
+                <label>Abdominal pain, Heavy menstrual bleeding, Increased urination</label>
+            </value>
+            <value>
+                <fullName>Back/Neck Pain</fullName>
+                <default>false</default>
+                <label>Back/Neck Pain</label>
+            </value>
+            <value>
+                <fullName>Leg pain - heaviness, swelling, throbbing, numbness, tingling</fullName>
+                <default>false</default>
+                <label>Leg pain - heaviness, swelling, throbbing, numbness, tingling</label>
+            </value>
+            <value>
+                <fullName>Lower leg open sores/ulcers</fullName>
+                <default>false</default>
+                <label>Lower leg open sores/ulcers</label>
+            </value>
+            <value>
+                <fullName>Varicose Veins</fullName>
+                <default>false</default>
+                <label>Varicose Veins</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Knee Pain</fullName>
+                <default>false</default>
+                <label>Knee Pain</label>
+            </value>
+            <value>
+                <fullName>Cold/flu</fullName>
+                <default>false</default>
+                <label>Cold/flu</label>
+            </value>
+            <value>
+                <fullName>Fibroids</fullName>
+                <default>false</default>
+                <label>Fibroids</label>
+            </value>
+            <value>
+                <fullName>Hemorrhoids</fullName>
+                <default>false</default>
+                <label>Hemorrhoids</label>
+            </value>
+            <value>
+                <fullName>Knee Pain/Arthritis</fullName>
+                <default>false</default>
+                <label>Knee Pain/Arthritis</label>
+            </value>
+            <value>
+                <fullName>Leg pain, numbness, heaviness, pain while walking</fullName>
+                <default>false</default>
+                <label>Leg pain, numbness, heaviness, pain while walking</label>
+            </value>
+            <value>
+                <fullName>Prime Care</fullName>
+                <default>false</default>
+                <label>Prime Care</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

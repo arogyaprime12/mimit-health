@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Practice_Work_Setting__c</fullName>
+    <description>Practice Work Setting</description>
+    <label>Practice Work Setting</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Academic</fullName>
+                <default>false</default>
+                <label>Academic</label>
+            </value>
+            <value>
+                <fullName>Healthcare organization</fullName>
+                <default>false</default>
+                <label>Healthcare organization</label>
+            </value>
+            <value>
+                <fullName>Multispecialty group private practice</fullName>
+                <default>false</default>
+                <label>Multispecialty group private practice</label>
+            </value>
+            <value>
+                <fullName>Single specialty Group private practice</fullName>
+                <default>false</default>
+                <label>Single specialty Group private practice</label>
+            </value>
+            <value>
+                <fullName>Solo</fullName>
+                <default>false</default>
+                <label>Solo</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

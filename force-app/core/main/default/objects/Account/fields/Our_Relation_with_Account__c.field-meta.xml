@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Our_Relation_with_Account__c</fullName>
+    <description>Relationship of the Account ( company or department) with our orgnaization</description>
+    <inlineHelpText>Please pick one of the values to describe our relationship with this Account / company or department. e,g is this account a vendor for us ( we pay them for services. or a customer ( they pay us )</inlineHelpText>
+    <label>Our_Relation with Account</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Competitior</fullName>
+                <default>false</default>
+                <label>Competitior</label>
+            </value>
+            <value>
+                <fullName>Customer_Existing</fullName>
+                <default>false</default>
+                <label>Customer_existing</label>
+            </value>
+            <value>
+                <fullName>Customer_potential</fullName>
+                <default>false</default>
+                <label>Customer_potential</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Partner</fullName>
+                <default>false</default>
+                <label>Partner</label>
+            </value>
+            <value>
+                <fullName>Regulatory Agency</fullName>
+                <default>false</default>
+                <label>Regulatory Agency</label>
+            </value>
+            <value>
+                <fullName>Vendor</fullName>
+                <default>false</default>
+                <label>Vendor</label>
+            </value>
+            <value>
+                <fullName>Vendor_Active</fullName>
+                <default>false</default>
+                <label>Vendor_Active</label>
+            </value>
+            <value>
+                <fullName>Vendor_past</fullName>
+                <default>false</default>
+                <label>Vendor_past</label>
+            </value>
+            <value>
+                <fullName>vendor_potential</fullName>
+                <default>false</default>
+                <label>vendor_potential</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MIMIT_status_at_helathcare_facility__c</fullName>
+    <description>Relationship between MIMIT and the Patient Healthcare facility</description>
+    <label>MIMIT_relationship_healthcare_facility</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Contracted_for_payment</fullName>
+                <default>false</default>
+                <label>Contracted_for_payment</label>
+            </value>
+            <value>
+                <fullName>Medical_Directorship</fullName>
+                <default>false</default>
+                <label>Medical_Directorship</label>
+            </value>
+            <value>
+                <fullName>MIMIT_Staff_NO_Credentials</fullName>
+                <default>false</default>
+                <label>MIMIT_Staff_NO_Credentials</label>
+            </value>
+            <value>
+                <fullName>MIMIT_Staff_credential_Active</fullName>
+                <default>false</default>
+                <label>MIMIT_Staff_credential_Active</label>
+            </value>
+            <value>
+                <fullName>MIMIT_Staff_credential_PENDING</fullName>
+                <default>false</default>
+                <label>MIMIT_Staff_credential_PENDING</label>
+            </value>
+            <value>
+                <fullName>Non-Contracted_No_payment</fullName>
+                <default>false</default>
+                <label>Non-Contracted_No_payment</label>
+            </value>
+            <value>
+                <fullName>Referral_Source</fullName>
+                <default>false</default>
+                <label>Referral_Source</label>
+            </value>
+            <value>
+                <fullName>Partner with MIMIT</fullName>
+                <default>false</default>
+                <label>Partner with MIMIT</label>
+            </value>
+            <value>
+                <fullName>Customer (have sent patients to MIMIT)</fullName>
+                <default>false</default>
+                <label>Customer (Has referred Patients to MIMIT)</label>
+            </value>
+            <value>
+                <fullName>MIMIT_Staff_Active</fullName>
+                <default>false</default>
+                <label>MIMIT_Staff_Active</label>
+            </value>
+            <value>
+                <fullName>MIMIT_Staff_Inactive</fullName>
+                <default>false</default>
+                <label>MIMIT_Staff_Inactive</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

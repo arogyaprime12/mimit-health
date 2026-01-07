@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Facility_Type__c</fullName>
+    <description>This describes the Facility of the Account</description>
+    <label>Account_Facility_Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Accounting firm</fullName>
+                <default>false</default>
+                <label>Accounting firm</label>
+            </value>
+            <value>
+                <fullName>Advertising Agency</fullName>
+                <default>false</default>
+                <label>Advertising Agency</label>
+            </value>
+            <value>
+                <fullName>Bank</fullName>
+                <default>false</default>
+                <label>Bank</label>
+            </value>
+            <value>
+                <fullName>BOARD _Advisory</fullName>
+                <default>false</default>
+                <label>BOARD _Advisory</label>
+            </value>
+            <value>
+                <fullName>Board of Directors (BOD)</fullName>
+                <default>false</default>
+                <label>Board of Directors (BOD)</label>
+            </value>
+            <value>
+                <fullName>Business office</fullName>
+                <default>false</default>
+                <label>Business office</label>
+            </value>
+            <value>
+                <fullName>Charitable Organizaton</fullName>
+                <default>false</default>
+                <label>Charitable Organizaton</label>
+            </value>
+            <value>
+                <fullName>Church</fullName>
+                <default>false</default>
+                <label>Church</label>
+            </value>
+            <value>
+                <fullName>Committee_AdHoc</fullName>
+                <default>false</default>
+                <label>Committee_AdHoc</label>
+            </value>
+            <value>
+                <fullName>Committee_Executive</fullName>
+                <default>false</default>
+                <label>Committee_Executive</label>
+            </value>
+            <value>
+                <fullName>Consulting Company</fullName>
+                <default>false</default>
+                <label>Consulting Company</label>
+            </value>
+            <value>
+                <fullName>Dental Clinic</fullName>
+                <default>false</default>
+                <label>Dental Clinic</label>
+            </value>
+            <value>
+                <fullName>Department of company</fullName>
+                <default>false</default>
+                <label>Department of company</label>
+            </value>
+            <value>
+                <fullName>Fitness Center</fullName>
+                <default>false</default>
+                <label>Fitness Center</label>
+            </value>
+            <value>
+                <fullName>Cancer Center</fullName>
+                <default>false</default>
+                <label>H-Cancer Center</label>
+            </value>
+            <value>
+                <fullName>Clinic</fullName>
+                <default>false</default>
+                <label>H-Clinic</label>
+            </value>
+            <value>
+                <fullName>Dermatology Center</fullName>
+                <default>false</default>
+                <label>H-Dermatology Center</label>
+            </value>
+            <value>
+                <fullName>Dialysis Access Center</fullName>
+                <default>false</default>
+                <label>H-Dialysis Access Center</label>
+            </value>
+            <value>
+                <fullName>Dialysis Center</fullName>
+                <default>false</default>
+                <label>H-Dialysis Center</label>
+            </value>
+            <value>
+                <fullName>healthcare staffing</fullName>
+                <default>false</default>
+                <label>healthcare staffing</label>
+            </value>
+            <value>
+                <fullName>Home Health Care</fullName>
+                <default>false</default>
+                <label>H-Home Health Care</label>
+            </value>
+            <value>
+                <fullName>Hospital</fullName>
+                <default>false</default>
+                <label>H-Hospital</label>
+            </value>
+            <value>
+                <fullName>Hospital-LTAC_Long_term_Acute_CAre</fullName>
+                <default>false</default>
+                <label>H-Hospital-LTAC_Long_term_Acute_CAre</label>
+            </value>
+            <value>
+                <fullName>Imaging Center</fullName>
+                <default>false</default>
+                <label>H-Imaging Center</label>
+            </value>
+            <value>
+                <fullName>Independent Living</fullName>
+                <default>false</default>
+                <label>H-Independent Living</label>
+            </value>
+            <value>
+                <fullName>Hiotel</fullName>
+                <default>false</default>
+                <label>Hiotel</label>
+            </value>
+            <value>
+                <fullName>Long Term Nursing Facility</fullName>
+                <default>false</default>
+                <label>H-Long Term Nursing Facility</label>
+            </value>
+            <value>
+                <fullName>Nursing Home</fullName>
+                <default>false</default>
+                <label>H-Nursing Home</label>
+            </value>
+            <value>
+                <fullName>Office Based Lab</fullName>
+                <default>false</default>
+                <label>H-Office Based Lab</label>
+            </value>
+            <value>
+                <fullName>H-Payer Carrier Health Insurance</fullName>
+                <default>false</default>
+                <label>H-Payer Carrier Health Insurance</label>
+            </value>
+            <value>
+                <fullName>Physical Therapy / Massage</fullName>
+                <default>false</default>
+                <label>H-Physical Therapy / Massage</label>
+            </value>
+            <value>
+                <fullName>Podiatry Center</fullName>
+                <default>false</default>
+                <label>H-Podiatry Center</label>
+            </value>
+            <value>
+                <fullName>Senior Assisted living facility</fullName>
+                <default>false</default>
+                <label>H-Senior Assisted  living facility</label>
+            </value>
+            <value>
+                <fullName>Skilled Nursing Facility</fullName>
+                <default>false</default>
+                <label>H-Skilled Nursing Facility</label>
+            </value>
+            <value>
+                <fullName>Women&apos;s Health Center</fullName>
+                <default>false</default>
+                <label>H-Women&apos;s Health Center</label>
+            </value>
+            <value>
+                <fullName>Wound Care Center</fullName>
+                <default>false</default>
+                <label>H-Wound Care Center</label>
+            </value>
+            <value>
+                <fullName>Lawfirm</fullName>
+                <default>false</default>
+                <label>Lawfirm</label>
+            </value>
+            <value>
+                <fullName>management_company-medical_practice</fullName>
+                <default>false</default>
+                <label>management_company-medical_practice</label>
+            </value>
+            <value>
+                <fullName>management_company-wound_care</fullName>
+                <default>false</default>
+                <label>management_company-wound_care</label>
+            </value>
+            <value>
+                <fullName>Management Company_Healthcare</fullName>
+                <default>false</default>
+                <label>Management Company_Healthcare</label>
+            </value>
+            <value>
+                <fullName>Marketing Agency</fullName>
+                <default>false</default>
+                <label>Marketing Agency</label>
+            </value>
+            <value>
+                <fullName>Media Company</fullName>
+                <default>false</default>
+                <label>Media Company</label>
+            </value>
+            <value>
+                <fullName>medical device company</fullName>
+                <default>false</default>
+                <label>medical device company</label>
+            </value>
+            <value>
+                <fullName>Medical School</fullName>
+                <default>false</default>
+                <label>Medical School</label>
+            </value>
+            <value>
+                <fullName>Medical Society</fullName>
+                <default>false</default>
+                <label>Medical Society</label>
+            </value>
+            <value>
+                <fullName>Medical Society_Association</fullName>
+                <default>false</default>
+                <label>Medical Society_Association</label>
+            </value>
+            <value>
+                <fullName>Medical Training Provider</fullName>
+                <default>false</default>
+                <label>Medical Training Provider</label>
+            </value>
+            <value>
+                <fullName>Med Spa</fullName>
+                <default>false</default>
+                <label>Med Spa</label>
+            </value>
+            <value>
+                <fullName>Museum</fullName>
+                <default>false</default>
+                <label>Museum</label>
+            </value>
+            <value>
+                <fullName>Newspaper</fullName>
+                <default>false</default>
+                <label>Newspaper</label>
+            </value>
+            <value>
+                <fullName>Pharmacy</fullName>
+                <default>false</default>
+                <label>Pharmacy</label>
+            </value>
+            <value>
+                <fullName>PR Agency</fullName>
+                <default>false</default>
+                <label>PR Agency</label>
+            </value>
+            <value>
+                <fullName>Printer_Commercial</fullName>
+                <default>false</default>
+                <label>Printer_Commercial</label>
+            </value>
+            <value>
+                <fullName>Recruitment_Agency</fullName>
+                <default>false</default>
+                <label>Recruitment_Agency</label>
+            </value>
+            <value>
+                <fullName>Restaurant</fullName>
+                <default>false</default>
+                <label>Restaurant</label>
+            </value>
+            <value>
+                <fullName>State Medical Licensure and Medical Disciplinary Board</fullName>
+                <default>false</default>
+                <label>State Medical Licensure and Medical Disciplinary Board</label>
+            </value>
+            <value>
+                <fullName>Surgical Center</fullName>
+                <default>false</default>
+                <label>Surgical Center</label>
+            </value>
+            <value>
+                <fullName>Transpotation</fullName>
+                <default>false</default>
+                <label>Transpotation</label>
+            </value>
+            <value>
+                <fullName>unknown</fullName>
+                <default>true</default>
+                <label>unknown</label>
+            </value>
+            <value>
+                <fullName>web Developer</fullName>
+                <default>false</default>
+                <label>web Developer</label>
+            </value>
+            <value>
+                <fullName>Winery</fullName>
+                <default>false</default>
+                <label>Winery</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

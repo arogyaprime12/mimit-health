@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MIMIT_Locations__c</fullName>
+    <description>PREFERRED Locations of service where procedure, service, opportunity will be performed</description>
+    <inlineHelpText>Please add the PREFERRED locations where this procedure will be performed</inlineHelpText>
+    <label>MIMIT Locations_preferred</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Hinsdale</fullName>
+                <default>false</default>
+                <label>Hinsdale_12 Salt creek lane</label>
+            </value>
+            <value>
+                <fullName>South Loop Clinic - 2415 S Michigan Ave</fullName>
+                <default>false</default>
+                <label>South Loop Clinic - 2415 S Michigan Ave</label>
+            </value>
+            <value>
+                <fullName>Nursing home</fullName>
+                <default>false</default>
+                <label>Nursing home</label>
+            </value>
+            <value>
+                <fullName>Home Visits</fullName>
+                <default>false</default>
+                <label>Home Visits</label>
+            </value>
+            <value>
+                <fullName>Melrose Park_Gottlieb- POB #402</fullName>
+                <default>false</default>
+                <label>Melrose Park_Gottlieb- POB #402</label>
+            </value>
+            <value>
+                <fullName>Edgebrook</fullName>
+                <default>false</default>
+                <label>Edgebrook</label>
+            </value>
+            <value>
+                <fullName>The Breakers at Edgewater Beach</fullName>
+                <default>false</default>
+                <label>The Breakers at Edgewater Beach</label>
+            </value>
+            <value>
+                <fullName>Wood Dale, IL</fullName>
+                <default>false</default>
+                <label>Wood Dale, IL</label>
+            </value>
+            <value>
+                <fullName>Jackson Park Hospital - Inpatient</fullName>
+                <default>false</default>
+                <label>Jackson Park Hospital - Inpatient</label>
+            </value>
+            <value>
+                <fullName>Jackson Park Hospital - Outpatient</fullName>
+                <default>false</default>
+                <label>Jackson Park Hospital - Outpatient</label>
+            </value>
+            <value>
+                <fullName>Loyola Gottlieb Hospital (Inpatient)</fullName>
+                <default>false</default>
+                <label>Loyola Gottlieb Hospital (Inpatient)</label>
+            </value>
+            <value>
+                <fullName>Loyola Gottlieb Hospital (Outpatient)</fullName>
+                <default>false</default>
+                <label>Loyola Gottlieb Hospital (Outpatient)</label>
+            </value>
+            <value>
+                <fullName>Rush Oak Park Hospital (inpatient)</fullName>
+                <default>false</default>
+                <label>Rush Oak Park Hospital (inpatient)</label>
+            </value>
+            <value>
+                <fullName>Rush Oak Park Hospital (Outpatient)</fullName>
+                <default>false</default>
+                <label>Rush Oak Park Hospital (Outpatient)</label>
+            </value>
+            <value>
+                <fullName>Bannockburn_Stillwater</fullName>
+                <default>false</default>
+                <label>Bannockburn_Stillwater</label>
+            </value>
+            <value>
+                <fullName>Clark Street, North Chicago, IL , MIMIT</fullName>
+                <default>false</default>
+                <label>Clark Street, North Chicago, IL , MIMIT</label>
+            </value>
+            <value>
+                <fullName>DesPlaines_IL_MIMIT_Office</fullName>
+                <default>false</default>
+                <label>DesPlaines_IL_MIMIT_Office</label>
+            </value>
+            <value>
+                <fullName>Methodist Hospital of Chicago ( Bethany)</fullName>
+                <default>false</default>
+                <label>Methodist Hospital of Chicago ( Bethany)</label>
+            </value>
+            <value>
+                <fullName>OakBrook_Terrace</fullName>
+                <default>false</default>
+                <label>OakBrook_Terrace</label>
+            </value>
+            <value>
+                <fullName>South chicago_Hyde Park</fullName>
+                <default>false</default>
+                <label>South chicago_Hyde Park</label>
+            </value>
+            <value>
+                <fullName>Edgewater Beach Foot and Ankle</fullName>
+                <default>false</default>
+                <label>Edgewater Beach Foot and Ankle</label>
+            </value>
+            <value>
+                <fullName>Glen Ellyn - 1186 Roosevelt Rd</fullName>
+                <default>false</default>
+                <label>Glen Ellyn - 1186 Roosevelt Rd</label>
+            </value>
+            <value>
+                <fullName>Des Plaines 9700 golf clinic</fullName>
+                <default>false</default>
+                <label>Des Plaines 9700 golf clinic</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>
