@@ -1,0 +1,176 @@
+name: Salesforce CI – develop branch
+
+on:
+  # Validate on PRs targeting develop
+  pull_request:
+    branches:
+      - develop
+
+  # Deploy on merges / pushes to develop
+  push:
+    branches:
+      - develop
+
+env:
+  # Same secret name you used in Bitbucket, stored in GitHub secrets
+  SFDX_AUTH_URL_CI_SANDBOX: ${{ secrets.SFDX_AUTH_URL_CI_SANDBOX }}
+
+jobs:
+  # ===============================
+  # 1) VALIDATE ON PR → develop
+  # ===============================
+  validate-packages:
+    name: Validate changed packages on PR
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # need history for git diff
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Salesforce CLI
+        run: |
+          npm install --global @salesforce/cli
+          sf --version
+
+      - name: Auth to sandbox
+        run: |
+          echo "$SFDX_AUTH_URL_CI_SANDBOX" > auth_url.txt
+          sf org login sfdx-url --sfdx-url-file auth_url.txt --alias targetSandbox --set-default
+          sf org display --target-org targetSandbox
+
+      - name: Compute changed files between PR base and head
+        id: changes
+        run: |
+          BASE_SHA="${{ github.event.pull_request.base.sha }}"
+          HEAD_SHA="${{ github.event.pull_request.head.sha }}"
+
+          echo "Base SHA:  $BASE_SHA"
+          echo "Head SHA:  $HEAD_SHA"
+
+          CHANGED_FILES=$(git diff --name-only "$BASE_SHA" "$HEAD_SHA")
+          echo "Changed files:"
+          echo "$CHANGED_FILES"
+
+          # expose to later steps
+          echo "changed_files<<EOF" >> $GITHUB_OUTPUT
+          echo "$CHANGED_FILES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Validate changed packages (dry run)
+        run: |
+          CHANGED_FILES="${{ steps.changes.outputs.changed_files }}"
+          echo "Using changed files from previous step:"
+          echo "$CHANGED_FILES"
+
+          has_changes_in() {
+            local DIR="$1"
+            echo "$CHANGED_FILES" | grep "^${DIR}/" >/dev/null 2>&1
+          }
+
+          PACKAGES=(
+            "force-app/core"
+            "force-app/patient-management"
+            "force-app/care-coordination"
+            "force-app/portal"
+            "force-app/omnistudio"
+          )
+
+          for PKG in "${PACKAGES[@]}"; do
+            if has_changes_in "$PKG"; then
+              echo "=== Validating package: $PKG ==="
+              sf project deploy start \
+                --target-org targetSandbox \
+                --source-dir "$PKG" \
+                --test-level NoTestRun \
+                --dry-run \
+                --wait 60
+            else
+              echo "No changes in $PKG – skipping validation."
+            fi
+          done
+
+  # ===============================
+  # 2) DEPLOY AFTER MERGE TO develop
+  # ===============================
+  deploy-packages:
+    name: Deploy changed packages to sandbox
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref_name == 'develop'
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # need previous commit
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Salesforce CLI
+        run: |
+          npm install --global @salesforce/cli
+          sf --version
+
+      - name: Auth to sandbox
+        run: |
+          echo "$SFDX_AUTH_URL_CI_SANDBOX" > auth_url.txt
+          sf org login sfdx-url --sfdx-url-file auth_url.txt --alias targetSandbox --set-default
+          sf org display --target-org targetSandbox
+
+      - name: Compute changed files since previous commit
+        id: changes
+        run: |
+          FROM_COMMIT="${{ github.event.before }}"
+          TO_COMMIT="${{ github.sha }}"
+
+          echo "Diff FROM: $FROM_COMMIT"
+          echo "Diff TO:   $TO_COMMIT"
+
+          CHANGED_FILES=$(git diff --name-only "$FROM_COMMIT" "$TO_COMMIT")
+          echo "Changed files:"
+          echo "$CHANGED_FILES"
+
+          echo "changed_files<<EOF" >> $GITHUB_OUTPUT
+          echo "$CHANGED_FILES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Deploy changed packages
+        run: |
+          CHANGED_FILES="${{ steps.changes.outputs.changed_files }}"
+          echo "Using changed files from previous step:"
+          echo "$CHANGED_FILES"
+
+          has_changes_in() {
+            local DIR="$1"
+            echo "$CHANGED_FILES" | grep "^${DIR}/" >/dev/null 2>&1
+          }
+
+          PACKAGES=(
+            "force-app/core"
+            "force-app/patient-management"
+            "force-app/care-coordination"
+            "force-app/portal"
+            "force-app/omnistudio"
+          )
+
+          for PKG in "${PACKAGES[@]}"; do
+            if has_changes_in "$PKG"; then
+              echo "=== Deploying package: $PKG ==="
+              sf project deploy start \
+                --target-org targetSandbox \
+                --source-dir "$PKG" \
+                --wait 60
+            else
+              echo "No changes in $PKG – skipping deploy."
+            fi
+          done
