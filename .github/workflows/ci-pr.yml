@@ -169,7 +169,7 @@ jobs:
               sf project deploy start \
                 --target-org targetSandbox \
                 --source-dir "$PKG" \
-                --wait 60
+                --wait 60 \
                 --ignore-conflicts
             else
               echo "No changes in $PKG – skipping deploy."
