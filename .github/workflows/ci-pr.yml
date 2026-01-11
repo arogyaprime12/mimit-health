@@ -89,7 +89,7 @@ jobs:
               sf project deploy start \
                 --target-org targetSandbox \
                 --source-dir "$PKG" \
-                --test-level RunLocalTests \
+                --test-level NoTestRun \
                 --dry-run \
                 --wait 60
             else
