@@ -89,7 +89,7 @@ jobs:
               sf project deploy start \
                 --target-org targetSandbox \
                 --source-dir "$PKG" \
-                --test-level NoTestRun \
+                --test-level RunLocalTests \
                 --dry-run \
                 --wait 60
             else
@@ -170,6 +170,7 @@ jobs:
                 --target-org targetSandbox \
                 --source-dir "$PKG" \
                 --wait 60
+                --ignore-conflicts
             else
               echo "No changes in $PKG – skipping deploy."
             fi
