@@ -1,0 +1,154 @@
+name: Salesforce CD – Release to Full & Prod
+
+on:
+  # Auto-run when a release branch is created/pushed
+  push:
+    branches:
+      - "release/**"
+
+  # Manual button to create a release branch + deploy
+  workflow_dispatch:
+    inputs:
+      release_version:
+        description: "Release version (e.g. 1.0.0) - will create branch release/<version>"
+        required: true
+        type: string
+      source_branch:
+        description: "Source branch to cut release from (e.g. develop)"
+        required: true
+        default: "develop"
+        type: string
+
+env:
+  NODE_VERSION: "20"
+
+jobs:
+  # -------------------------------------------------------
+  # 0) OPTIONAL: Create release branch when manually invoked
+  # -------------------------------------------------------
+  create-release-branch:
+    name: Create release branch (manual only)
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch'
+    permissions:
+      contents: write
+
+    outputs:
+      release_branch: ${{ steps.set.outputs.release_branch }}
+
+    steps:
+      - name: Checkout source branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.source_branch }}
+          fetch-depth: 0
+
+      - name: Create and push release branch
+        id: set
+        run: |
+          RELEASE_BRANCH="release/${{ inputs.release_version }}"
+          echo "Creating $RELEASE_BRANCH from ${{ inputs.source_branch }}"
+
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git checkout -b "$RELEASE_BRANCH"
+          git push origin "$RELEASE_BRANCH"
+
+          echo "release_branch=$RELEASE_BRANCH" >> $GITHUB_OUTPUT
+
+  # -------------------------------------------------------
+  # 1) Deploy to FULL sandbox
+  # -------------------------------------------------------
+  deploy-full:
+    name: Deploy to Full Sandbox
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    environment: full
+
+    # Run on:
+    # - push to release/** branches
+    # - OR after create-release-branch job in manual mode
+    needs: [create-release-branch]
+    if: |
+      github.event_name == 'push' ||
+      (github.event_name == 'workflow_dispatch' && needs.create-release-branch.result == 'success')
+
+    steps:
+      - name: Checkout release branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event_name == 'workflow_dispatch' && needs.create-release-branch.outputs.release_branch || github.ref_name }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install Salesforce CLI
+        run: |
+          npm install --global @salesforce/cli
+          sf --version
+
+      - name: Auth to Full Sandbox
+        env:
+          SFDX_AUTH_URL: ${{ secrets.SFDX_AUTH_URL_FULL_SANDBOX }}
+        run: |
+          echo "$SFDX_AUTH_URL" > auth_url.txt
+          sf org login sfdx-url --sfdx-url-file auth_url.txt --alias fullSandbox --set-default
+          sf org display --target-org fullSandbox
+
+      # Option 1: Deploy everything in repo
+      # (If you want package-by-package like develop pipeline, tell me and I’ll adapt it.)
+      - name: Deploy to Full Sandbox
+        run: |
+          sf project deploy start \
+            --target-org fullSandbox \
+            --wait 180 \
+            --test-level RunLocalTests \
+            --ignore-conflicts
+
+  # -------------------------------------------------------
+  # 2) Deploy to PRODUCTION (gated by environment approval)
+  # -------------------------------------------------------
+  deploy-prod:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    environment: production
+    needs: [deploy-full]
+    if: needs.deploy-full.result == 'success'
+
+    steps:
+      - name: Checkout same release branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event_name == 'workflow_dispatch' && needs.create-release-branch.outputs.release_branch || github.ref_name }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install Salesforce CLI
+        run: |
+          npm install --global @salesforce/cli
+          sf --version
+
+      - name: Auth to Production
+        env:
+          SFDX_AUTH_URL: ${{ secrets.SFDX_AUTH_URL_PRODUCTION }}
+        run: |
+          echo "$SFDX_AUTH_URL" > auth_url.txt
+          sf org login sfdx-url --sfdx-url-file auth_url.txt --alias prod --set-default
+          sf org display --target-org prod
+
+      - name: Deploy to Production
+        run: |
+          sf project deploy start \
+            --target-org prod \
+            --wait 240 \
+            --test-level RunLocalTests \
+            --ignore-conflicts
